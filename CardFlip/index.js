@@ -3,6 +3,8 @@ let uniqueNum = [];
 let randomNumToGuess;
 let correctDiv;
 let innerContainers = document.querySelectorAll('.inner-container');
+let score = 0;
+let attempt = 0;
 createRandom();
 function createRandom(from=false) {
 	uniqueNum = [];
@@ -62,9 +64,11 @@ function flipCards(from=false) {
 function flip(evt) {
 	let style;
   let message;
+  attempt += 1;
 	if(+evt.target.parentNode.children[0].innerHTML === randomNumToGuess) {
   	style = 'green';
     message = 'Guessed right 🤩'
+    score += 1;
   } else {
   	style = 'red';
     message = 'Guessed wrong 😑'
@@ -76,6 +80,8 @@ function flip(evt) {
   correctDiv.children[0].style.backgroundColor = 'green';
   correctDiv.classList.add('container-nonfliped');
   correctDiv.classList.remove('container-fliped');
+  document.querySelector('.score').children[0].innerHTML = score;
+  document.querySelector('.score').children[1].innerHTML = attempt;
   setTimeout(() => {
   	createRandom(true);
   }, 5000);

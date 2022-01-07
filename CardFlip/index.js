@@ -5,6 +5,7 @@ let correctDiv;
 let innerContainers = document.querySelectorAll('.inner-container');
 let score = 0;
 let attempt = 0;
+document.querySelector('.main').style.pointerEvents = 'none';
 createRandom();
 function createRandom(from=false) {
 	uniqueNum = [];
@@ -56,6 +57,7 @@ function flipCards(from=false) {
       randomNumToGuess = uniqueNum[randomIdx];
       correctDiv = innerContainers[randomIdx];
       document.querySelector('.guess-box').innerHTML = randomNumToGuess;
+      document.querySelector('.main').style.pointerEvents = '';
     } else {
     	document.querySelector('.guess-box').innerHTML = '';
     }

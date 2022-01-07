@@ -47,6 +47,7 @@ function flipCards(from=false) {
           randomNumToGuess = uniqueNum[randomIdx];
           correctDiv = innerContainers[randomIdx];
           document.querySelector('.guess-box').innerHTML = randomNumToGuess;
+          document.querySelector('.main').style.pointerEvents = '';
          }, 5000);
       }
     }
@@ -82,6 +83,7 @@ function flip(evt) {
   correctDiv.classList.remove('container-fliped');
   document.querySelector('.score').children[0].innerHTML = score;
   document.querySelector('.score').children[1].innerHTML = attempt;
+  document.querySelector('.main').style.pointerEvents = 'none';
   setTimeout(() => {
   	createRandom(true);
   }, 5000);

@@ -83,7 +83,7 @@ function findResult() {
     for(let i = 0 ; i < expression.length; i++) {
         if(!isNaN(expression[i])) {
             let num = '';
-            while(!isNaN(expression[i]) && i < expression.length) {
+            while((!isNaN(expression[i]) || expression[i] === '.') && i < expression.length) {
                 num += expression[i];
                 i++;
             }
@@ -111,4 +111,9 @@ function findResult() {
 function clearExpression() {
     prevExpression = '';
     expressionSection.innerHTML = '';
+}
+
+function backspace() {
+    prevExpression = prevExpression.substr(0, prevExpression.length - 1);
+    expressionSection.innerHTML = prevExpression;
 }

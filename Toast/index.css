@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  text-align: center;
+}
+.bottom-right {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+.toast-wrapper {
+  display: flex;
+  min-width: 2rem;
+  background-color: #00b300;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  animation: appearFromRight 0.5s ease-in forwards;
+  padding: 10px;
+  font-size: 20px;
+  margin: 10px;
+}
+.remove {
+  border: none;
+  background: transparent;
+  height: fit-content;
+  cursor: pointer;
+}
+.fadeRight {
+  animation: fadeRight 0.5s ease-out forwards;
+}
+
+@keyframes appearFromRight {
+  0% {
+    transform: translate(200%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(200%, 0);
+  }
+}

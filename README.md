@@ -7,3 +7,4 @@ Following challenges are included
 4. https://robinl3680.github.io/FE-Micro-challenges/ResizableDiv/
 5. https://robinl3680.github.io/FE-Micro-challenges/Carousel/
 6. https://robinl3680.github.io/FE-Micro-challenges/Toast/
+7. https://robinl3680.github.io/FE-Micro-challenges/TypeAhead/

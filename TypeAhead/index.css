@@ -1,0 +1,28 @@
+.list-item {
+  background-color: lightgray;
+  list-style: none;
+  cursor: pointer;
+  margin-top: 0.2rem;
+  padding-left: 1rem;
+  height: 40px;
+  align-items: center;
+  display: flex;
+}
+.list-item:hover {
+  background-color: greenyellow;
+  outline: 1px solid ;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#txt {
+  width: 250px;
+}
+#suggestion {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}

@@ -20,7 +20,7 @@ jobs:
       - name: Move normal JS projects to docs
         run: |
           for dir in */ ; do
-            if [ -f "$dir/index.html" ] && [ ! -f "$dir/package.json" ]; then
+            if [ -f "$dir/index.html" ] && [ ! -f "$dir/package.json" ] && [ "$dir" != "docs/" ]; then
               echo "Copying $dir to docs/"
               cp -r "$dir" "docs/"
             fi

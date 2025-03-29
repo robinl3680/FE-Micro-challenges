@@ -37,6 +37,7 @@ jobs:
               echo "Installing dependencies for $dir"
               npm install
               npm run build
+              rm -rf "../docs/$dir"
               mv dist "../docs/$dir"
               cd ..
             fi

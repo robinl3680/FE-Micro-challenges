@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+  }
+  .star-empty::before {
+    content: '☆';
+  }
+  .star-filled::before {
+    content: '★';
+    color: green !important;
+  }
+  .star {
+    font-size: 5rem;
+  }
+  

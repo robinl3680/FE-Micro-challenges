@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.card-animation {
+  animation: animate 1.5s ease-in;
+}
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+    transform: translateY(100%);
+  };
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

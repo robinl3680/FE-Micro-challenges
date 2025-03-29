@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+    <meta name="description" content="Toast popup" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form class="wrapper">
+      <input id="content" type="text" />
+      <button type="button" id="show">Show toast</button>
+    </form>
+    <div id="toast-container" class="bottom-right">
+
+    </div>
+    <template id="toast-template">
+      <div class="toast-wrapper">
+        <div class="toast">
+
+        </div>
+        <button class="remove" type="button">✕</button>
+      </div>
+    </template>
+  </body>
+</html>

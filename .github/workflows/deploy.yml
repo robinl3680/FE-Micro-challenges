@@ -15,12 +15,8 @@ jobs:
           node-version: "18"
       - name: Move main index file to docs
         run: |
-          if([ -f "index.html" ] && [! -f "docs/index.html"]); then
-            echo "moving main index file"
-            mv index.html docs/
-          else
-            echo "index file already existing in docs/"
-          fi
+          rm -f docs/index.html
+          mv index.html docs/
       - name: Move normal JS projects to docs
         run: |
           for dir in */ ; do

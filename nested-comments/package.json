@@ -2,7 +2,7 @@
   "name": "nested-comments",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://robinl3680.github.io/FE-Micro-challenges/",
+  "homepage": "https://robinl3680.github.io/FE-Micro-challenges/nested-comments",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

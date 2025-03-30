@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FE-Micro-challenges/static/css/main.44416736.css",
-    "main.js": "/FE-Micro-challenges/static/js/main.0687a141.js",
-    "static/js/453.578b661d.chunk.js": "/FE-Micro-challenges/static/js/453.578b661d.chunk.js",
-    "index.html": "/FE-Micro-challenges/index.html",
-    "main.44416736.css.map": "/FE-Micro-challenges/static/css/main.44416736.css.map",
-    "main.0687a141.js.map": "/FE-Micro-challenges/static/js/main.0687a141.js.map",
-    "453.578b661d.chunk.js.map": "/FE-Micro-challenges/static/js/453.578b661d.chunk.js.map"
+    "main.css": "/FE-Micro-challenges/nested-comments/static/css/main.44416736.css",
+    "main.js": "/FE-Micro-challenges/nested-comments/static/js/main.eb60e195.js",
+    "static/js/453.578b661d.chunk.js": "/FE-Micro-challenges/nested-comments/static/js/453.578b661d.chunk.js",
+    "index.html": "/FE-Micro-challenges/nested-comments/index.html",
+    "main.44416736.css.map": "/FE-Micro-challenges/nested-comments/static/css/main.44416736.css.map",
+    "main.eb60e195.js.map": "/FE-Micro-challenges/nested-comments/static/js/main.eb60e195.js.map",
+    "453.578b661d.chunk.js.map": "/FE-Micro-challenges/nested-comments/static/js/453.578b661d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44416736.css",
-    "static/js/main.0687a141.js"
+    "static/js/main.eb60e195.js"
   ]
 }

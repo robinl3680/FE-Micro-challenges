@@ -1,6 +1,7 @@
 {
   "name": "otp-input",
   "private": true,
+  "homepage": "https://robinl3680.github.io/FE-Micro-challenges/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

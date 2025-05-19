@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [otpFields, setOtpFields] = useState(Array(6).fill(""));
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     index: number
@@ -28,21 +29,37 @@ function App() {
       const newOtps = [...otpFields];
       newOtps[index] = "";
       setOtpFields(newOtps);
-      // Move focus to the previous input field
       inputRefs.current[index - 1]?.focus();
     } else if (e.key === "ArrowRight") {
       e.preventDefault();
-      // Move focus to the next input field
       if (index < otpFields.length - 1) {
         inputRefs.current[index + 1]?.focus();
       }
     } else if (e.key === "ArrowLeft") {
       e.preventDefault();
-      // Move focus to the previous input field
       if (index > 0) {
         inputRefs.current[index - 1]?.focus();
       }
     }
+  };
+
+  const handlePaste = (
+    e: React.ClipboardEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    e.preventDefault();
+    const pasteData = e.clipboardData.getData("text").replace(/\D/g, "");
+    const newOtps = [...otpFields];
+    for (let i = 0; i < pasteData.length; i++) {
+      if (index + i < otpFields.length) {
+        newOtps[index + i] = pasteData[i];
+      }
+    }
+    setOtpFields(newOtps);
+
+    // Move focus to the last filled input field
+    const nextIndex = Math.min(index + pasteData.length, otpFields.length - 1);
+    inputRefs.current[nextIndex]?.focus();
   };
 
   return (
@@ -56,6 +73,7 @@ function App() {
             }}
             onChange={(e) => handleChange(e, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
+            onPaste={(e) => handlePaste(e, index)}
             value={otpFields[index]}
           />
         );

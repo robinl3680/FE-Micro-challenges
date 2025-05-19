@@ -1,0 +1,16 @@
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.grid-item {
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 100px;
+}
+.hidden {
+  visibility: hidden;
+}
+.active {
+  background-color: green;
+}

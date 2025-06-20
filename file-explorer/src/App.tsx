@@ -36,15 +36,13 @@ const addNewItem = (
 };
 
 const deleteItem = (id: string, nodeList: NodeType[]): NodeType[] => {
-  return nodeList.reduce((acc, node) => {
-    if (node.id === id) {
-      return acc;
-    }
-    if (node.children) {
-      return [...acc, { ...node, children: deleteItem(id, node.children) }];
-    }
-    return [...acc, node];
-  }, [] as NodeType[]);
+  return nodeList
+    .filter((node) => node.id !== id)
+    .map((node) =>
+      node.children
+        ? { ...node, children: deleteItem(id, node.children) }
+        : node
+    );
 };
 
 function App() {

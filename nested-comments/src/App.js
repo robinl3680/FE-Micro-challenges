@@ -98,7 +98,6 @@ const deleteCommentFromTree = (tree, commentId) => {
       tree.splice(i, 1);
       return true;
     }
-
     if (deleteCommentFromTree(tree[i].replies, commentId)) return true;
   }
   return false;

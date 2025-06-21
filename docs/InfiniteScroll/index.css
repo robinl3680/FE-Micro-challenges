@@ -1,3 +1,11 @@
+#container {
+  height: 100vh;
+}
+
+#card-container {
+  height: 100%;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -9,14 +17,14 @@
   justify-content: center;
 }
 .card-animation {
-  animation: animate 1.5s ease-in;
+  animation: animate 1.5s ease;
 }
 @keyframes animate {
-  0% {
+  from {
     opacity: 0.3;
     transform: translateY(100%);
-  };
-  100% {
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
   }
